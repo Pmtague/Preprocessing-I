@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -125,6 +125,8 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 1rem;
+  width: 57rem;
 }
 /* Set every element's box-sizing to border-box */
 * {
@@ -133,4 +135,99 @@ table {
 html,
 body {
   height: 100%;
+  width: auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+img.header-img {
+  width: 17rem;
+}
+header {
+  background-color: lightgrey;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+div.header-content {
+  padding: 1rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+a.top-nav {
+  padding: 1rem;
+}
+section.top-content {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: purple;
+  color: white;
+}
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+}
+h3 {
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+}
+p.abilities {
+  border: 1px solid lightgrey;
+  padding: 1rem;
+  border-radius: 5px;
+}
+h3.table-title {
+  margin: 1rem;
+}
+tr {
+  border-top: 1px solid lightgrey;
+}
+th {
+  text-align: left;
+  padding: 1rem;
+}
+tr.grey-row {
+  background-color: lightgrey;
+}
+td {
+  padding: 1rem;
+}
+p.header-para {
+  padding-top: 1rem;
+  border-top: 1px solid darkgrey;
+  padding-bottom: 1.5rem;
+}
+.button {
+  background-color: purple;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
