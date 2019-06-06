@@ -53,7 +53,154 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@border: 1px solid lightgrey;
+
+
+
+/* Mixins */
+.flexbox {
+	display: flex;
+	flex-direction: column;
 }
 
+/* General */
+html, body {
+	height: 100%;
+	width: 80%;
+	font-size: 62.5%;
+	.flexbox();
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+p {
+    font-size: 2.5rem;
+}
+
+/* Navigation */
+nav {
+	display: flex;
+	justify-content: flex-end;
+
+	a.top-nav {
+		padding: 2rem;
+		font-size: 2rem;
+	}
+}
+
+/* Header Box */
+header {
+    background-color: lightgrey;
+    margin-right: 1rem;
+	margin-left: 5rem;
+	border: @border;
+	border-radius: 15px;
+	  
+	div.header-content {
+		padding: 4rem;
+	}
+	
+  	img.header-img {
+		width: 37rem;
+	}
+
+	h1 {
+		font-size: 7rem;
+	}
+
+	h4 {
+		font-size: 3.2rem;
+		padding-top: .5rem;
+		  padding-bottom: 1rem;
+	}
+
+	p.header-para {
+		padding-top: 1rem;
+		border-top: 1px solid darkgrey;
+		padding-bottom: 1.5rem;
+		font-size: 2rem;
+	}
+
+	.button {
+		background-color: purple;
+		color:  white;
+		border:  1px solid black;
+		border-radius: 5px;
+		padding: .5rem;
+		font-size: 2.5rem;
+	}
+}
+
+/* Middle Section */
+section.top-content {
+	margin: 5rem 0rem 5rem 5rem;
+	display: flex;
+	justify-content: space-between;
+	  
+	.intro {
+		display:  flex;
+		flex-direction: column;
+		width: 55rem;
+
+		h2 {
+			font-size: 4.5rem;
+			padding-bottom: .5rem;
+		}
+	}
+
+	.list {
+		.flexbox();
+		width: 55rem;
+		
+		p.abilities {
+			border: @border;
+			padding: 1rem;
+			border-radius: 5px;
+		}
+	}
+}
+
+h3 {
+	font-size: 4.3rem;
+	padding-bottom: .5rem;
+}
+
+/* Table */
+h3.table-title {
+    margin-left: 5rem;
+}
+
+table {
+	margin: 1rem 0rem 4rem 5rem;
+	width: 117rem;
+	font-size: 2.5rem;
+
+	tr {
+		border-top: @border;
+
+		th {
+			text-align: left;
+			padding: 1rem;
+		}
+
+		td {
+			padding: 1rem;
+		}
+	}
+}
+
+tr.grey-row {
+	background-color: lightgrey;
+}
+
+footer {
+    display: flex;
+	justify-content: center;
+	background-color: purple;
+	color: white;
+	margin-left: 5rem;
+	font-size: 1.5rem;
+}
