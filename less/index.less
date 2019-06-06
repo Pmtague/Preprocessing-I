@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 62.5%;
+	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -53,14 +53,31 @@ table {
     box-sizing: border-box;
 }
 
+@border: 1px solid lightgrey;
+
+
+
+/* Mixins */
+.flexbox {
+	display: flex;
+	flex-direction: column;
+}
+
+/* General */
 html, body {
 	height: 100%;
-	width: auto;
+	width: 80%;
+	font-size: 62.5%;
+	.flexbox();
 }
 
 a {
 	text-decoration: none;
 	color: black;
+}
+
+p {
+    font-size: 2.5rem;
 }
 
 /* Navigation */
@@ -69,7 +86,8 @@ nav {
 	justify-content: flex-end;
 
 	a.top-nav {
-		padding: 1rem;
+		padding: 2rem;
+		font-size: 2rem;
 	}
 }
 
@@ -77,24 +95,24 @@ nav {
 header {
     background-color: lightgrey;
     margin-right: 1rem;
-	margin-left: 1rem;
-	border: 1px solid lightgrey;
-	border-radius: 5px;
+	margin-left: 5rem;
+	border: @border;
+	border-radius: 15px;
 	  
 	div.header-content {
-		padding: 1rem;
+		padding: 4rem;
 	}
 	
   	img.header-img {
-		width: 17rem;
+		width: 37rem;
 	}
 
 	h1 {
-		font-size: 3rem;
+		font-size: 7rem;
 	}
 
 	h4 {
-		font-size: 1.2rem;
+		font-size: 3.2rem;
 		padding-top: .5rem;
 		  padding-bottom: 1rem;
 	}
@@ -103,6 +121,7 @@ header {
 		padding-top: 1rem;
 		border-top: 1px solid darkgrey;
 		padding-bottom: 1.5rem;
+		font-size: 2rem;
 	}
 
 	.button {
@@ -111,33 +130,33 @@ header {
 		border:  1px solid black;
 		border-radius: 5px;
 		padding: .5rem;
+		font-size: 2.5rem;
 	}
 }
 
-/* Top Section */
+/* Middle Section */
 section.top-content {
-	margin: 1rem;
+	margin: 5rem 0rem 5rem 5rem;
 	display: flex;
 	justify-content: space-between;
 	  
 	.intro {
 		display:  flex;
 		flex-direction: column;
-		width: 28rem;
+		width: 55rem;
 
 		h2 {
-			font-size: 1.5rem;
+			font-size: 4.5rem;
 			padding-bottom: .5rem;
 		}
 	}
 
 	.list {
-		display: flex;
-		flex-direction: column;
-		width: 28rem;
+		.flexbox();
+		width: 55rem;
 		
 		p.abilities {
-			border: 1px solid lightgrey;
+			border: @border;
 			padding: 1rem;
 			border-radius: 5px;
 		}
@@ -145,21 +164,22 @@ section.top-content {
 }
 
 h3 {
-	font-size: 1.3rem;
+	font-size: 4.3rem;
 	padding-bottom: .5rem;
 }
 
 /* Table */
 h3.table-title {
-    margin: 1rem;
+    margin-left: 5rem;
 }
 
 table {
-	margin: 1rem;
-	width: 57rem;
+	margin: 1rem 0rem 4rem 5rem;
+	width: 117rem;
+	font-size: 2.5rem;
 
 	tr {
-		border-top: 1px solid lightgrey;
+		border-top: @border;
 
 		th {
 			text-align: left;
@@ -181,4 +201,6 @@ footer {
 	justify-content: center;
 	background-color: purple;
 	color: white;
+	margin-left: 5rem;
+	font-size: 1.5rem;
 }
